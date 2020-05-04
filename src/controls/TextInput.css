@@ -1,0 +1,43 @@
+.text-input {
+    position: relative;
+    padding: 12px 0;
+}
+
+.text-input input {
+    width: 100%;
+    padding: 6px 6px;
+    border: 0;
+    outline: none;
+}
+
+.text-input label {
+    position: absolute;
+    color: gray;
+    font-style: italic;
+    left: 6px;
+    top: 18px;
+    pointer-events: none;
+    transition: all 0.15s;
+}
+
+.text-input label.subsided {
+    left: 0;
+    top: 0;
+    font-size: 9pt;
+    transition: all 0.15s;
+    color: lightgray;
+}
+
+.text-input .focus-indicator {
+    position: absolute;
+    bottom: 12px;
+    width: 100%;
+    border: solid gray;
+    border-width: 0 0 1px 0;
+}
+
+.text-input input:focus+.focus-indicator {
+    border-color: black;
+    border-color: var( --focus-indicator-color, black);
+    border-width: 0 0 2px 0;
+}

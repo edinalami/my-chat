@@ -1,0 +1,207 @@
+html, body, div {
+  margin: 0;
+  padding: 0;
+}
+  
+* {
+  box-sizing: border-box;
+}
+
+html, body, main, .app, .main {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+  
+input, button {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+p {
+  margin: 0 0 6px 0;
+}
+
+input {
+  padding: 4px 6px;
+}
+
+button {
+  padding: 6px 12px;
+  background-color: #00A5C6;
+  color: white;
+  font-weight: 600;
+  border: none;
+  border-radius: 2px;
+}
+
+button:hover {
+  background-color: #00BBE0;
+}
+
+.row {
+  display: flex;
+}
+
+.row>* {
+  min-width: 0;
+  flex: 1;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.column>* {
+  min-height: 0;
+  flex: 1;
+}
+
+.login {
+  max-width: 400px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.left-pane {
+  flex: 0 0 300px;
+}
+
+.my-tag {
+  padding: 6px 10px;
+  font-weight: 500;
+}
+
+.text-input-and-button {
+  display: flex;
+  align-items: center;
+}
+
+.text-input-and-button>*:first-child {
+  flex: 1;
+}
+
+.left-pane .text-input-and-button {
+  margin: 6px 10px;
+}
+
+.left-pane .text-input-and-button button {
+  flex: 0 0 auto;
+  margin: 0;
+}
+
+.conversation-card {
+  cursor: pointer;
+  padding: 6px 10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.conversation-card:hover {
+  background-color: #eee;
+}
+
+.conversation-card .channel-name {
+  font-weight: 500;
+  color: black;
+}
+
+.conversation-card .time {
+  text-align: right;
+  color: #888;
+}
+
+.conversation-card .last-message {
+  color: #888;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@media (max-width: 650px) {
+  .left .right-pane {
+    display: none;
+  }
+  .right .left-pane {
+    display: none;
+  }
+  .left .left-pane {
+    flex: 1;
+  }
+}
+
+.right-pane {
+  border: solid #aaa;
+  border-width: 0 0 0 1px;
+}
+
+.right-pane .conversation-header {
+  padding: 6px 8px;
+  font-weight: 500;
+  color: black;
+  flex: 0 0 auto;
+  align-items: center;
+}
+
+.right-pane .conversation-header>p {
+  margin: 6px 10px;
+}
+
+.right-pane .conversation-header>button {
+  flex: 0 0 auto;
+}
+
+@media (max-width: 650px) {
+  .right-pane {
+    border-width: 0 0 0 0;
+  }
+}
+
+@media (min-width: 650px) {
+  .only-narrow {
+    display: none;
+  }
+}
+
+.messages {
+  border: solid #aaa;
+  border-width: 1px 0;
+  overflow-y: scroll;
+}
+
+.message-card {
+  margin: 6px 8px;
+}
+
+.message-card.own {
+  margin: 6px 8px;
+  text-align: right;
+}
+
+.message-card .bubble {
+  display: inline-block;
+  background: white;
+  padding: 6px 10px;
+  border-radius: 5px;
+  box-shadow: 1px 1px 5px gray;
+}
+
+.message-card.own .bubble {
+  background: #eee;
+}
+
+.message-card .time {
+  margin: 0 0 0 10px;
+  color: #aaa;
+}
+
+.right-pane .send-message {
+  padding: 6px 8px;
+  flex: 0 0 auto;
+}
